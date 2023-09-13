@@ -18,7 +18,7 @@ namespace VanPhap.View
     {
         private Form activeForm;
 
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo1.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -116,7 +116,7 @@ namespace VanPhap.View
                                 // Không có dòng nào được xóa
                                 MessageBox.Show("Không có dòng nào được xóa");
                             }
-                            connection.Close();
+                          
                         }
                     }//Dong if
 
@@ -186,7 +186,7 @@ namespace VanPhap.View
 
                     lsv_timchubai.Items.Add(lvi);
                 }
-                CloseConection();
+               
             }
         }
 

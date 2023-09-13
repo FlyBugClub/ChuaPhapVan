@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.ExtendedProperties;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace VanPhap.View
 {
     public partial class NguoiNhanCauAn : Form
     {
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
 
@@ -59,6 +60,7 @@ namespace VanPhap.View
         public string DataFromForm11 { get; set; }
         private void NguoiNhanCauAn_Load(object sender, EventArgs e)
         {
+            int currentYear = DateTime.Now.Year;
 
             comboBox_namsinh.DropDownHeight = comboBox_namsinh.ItemHeight * 14;// nhảy 12 số combobox không được xóa !!!!!!
             string[] can = { "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý" };
@@ -66,7 +68,7 @@ namespace VanPhap.View
             txt_id_so.Text = DataFromForm11;
 
             List<string> cuong = new List<string>();
-            for (int i = 1900; i < 2023; i++)
+            for (int i = 1900; i <= currentYear+1; i++)
             {
                 int canIndex = (i - 4) % 10;
                 int chiIndex = (i - 4) % 12;
@@ -182,7 +184,7 @@ namespace VanPhap.View
                         // Thực thi câu lệnh INSERT
                         int rowsAffected = command.ExecuteNonQuery();
                         // Kiểm tra số dòng bị ảnh hưởng
-                        connection.Close();
+                       
                     }
                 }
 
@@ -477,6 +479,10 @@ namespace VanPhap.View
             string[] arr = selectedValue.Split(' ');
             int nam = int.Parse(arr[0]);
             int tuoi = currentYear - nam;
+            if(tuoi == 0)
+            {
+                tuoi = 1;
+            }    
             txt_Tuoi.Text = tuoi.ToString() + " tuổi";
 
             if (txt_Tuoi.Text.Equals("") || cbb_gioitinh.Text.Equals(""))
@@ -527,7 +533,7 @@ namespace VanPhap.View
             int currentYear = DateTime.Now.Year;
 
             List<string> cuong = new List<string>();
-            for (int i = 1900; i < currentYear; i++)
+            for (int i = 1900; i <= currentYear; i++)
             {
                 int canIndex = (i - 4) % 10;
                 int chiIndex = (i - 4) % 12;
@@ -550,6 +556,11 @@ namespace VanPhap.View
         private void NguoiNhanCauAn_Shown(object sender, EventArgs e)
         {
             txt_name.Focus();
+        }
+
+        private void txt_Tuoi_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 
