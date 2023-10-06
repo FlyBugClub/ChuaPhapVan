@@ -135,7 +135,7 @@ namespace VanPhap.View
 
                 }
                
-              
+
             }
         }
 
@@ -322,7 +322,7 @@ namespace VanPhap.View
                             //MessageBox.Show("Không có dòng nào được xóa");
                         }
                        
-                        
+
                     }
                 }//Dong if
                 else

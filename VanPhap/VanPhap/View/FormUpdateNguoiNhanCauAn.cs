@@ -1,4 +1,4 @@
-﻿using DocumentFormat.OpenXml.ExtendedProperties;
+using DocumentFormat.OpenXml.ExtendedProperties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -358,10 +358,6 @@ namespace VanPhap.View
                     }
                 }
                 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
             }
         }
 
@@ -487,12 +483,7 @@ namespace VanPhap.View
                         // Thực thi câu lệnh INSERT
                         int rowsAffected = command.ExecuteNonQuery();
                         // Kiểm tra số dòng bị ảnh hưởng
-<<<<<<< HEAD
                       
-=======
-                       
-
->>>>>>> main
                     }
 
                 }
