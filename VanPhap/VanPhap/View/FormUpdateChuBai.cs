@@ -1,4 +1,4 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using System;
 using System.Collections.Generic;
@@ -328,6 +328,7 @@ namespace VanPhap.View
                         int rowsAffected = command.ExecuteNonQuery();
                         // Kiểm tra số dòng bị ảnh hưởng
                        
+                        
                     }
 
                     SoCauAn form1 = Application.OpenForms.OfType<SoCauAn>().FirstOrDefault();
@@ -646,6 +647,11 @@ namespace VanPhap.View
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_Tuoi_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

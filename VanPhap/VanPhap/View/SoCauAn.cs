@@ -1,4 +1,4 @@
-﻿using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
 using System;
@@ -135,6 +135,7 @@ namespace VanPhap.View
 
                 }
                
+              
             }
         }
 
@@ -321,6 +322,7 @@ namespace VanPhap.View
                             //MessageBox.Show("Không có dòng nào được xóa");
                         }
                        
+                        
                     }
                 }//Dong if
                 else
@@ -523,7 +525,7 @@ namespace VanPhap.View
             try
             {
                 // tạo tệp mới
-                string path = @"C:\Git\ChuaPhapVan\VanPhap\html\index.html";
+                string path = @"Z:\index.html";
                 File.Create(path).Close();
                 using (StreamWriter sw = new StreamWriter(path))
                 {
@@ -616,7 +618,7 @@ namespace VanPhap.View
 
 
                 }
-                Process.Start("C:\\Git\\ChuaPhapVan\\VanPhap\\html\\index.html");
+                Process.Start("Z:\\index.html");
             }
             catch (Exception ex)
             {

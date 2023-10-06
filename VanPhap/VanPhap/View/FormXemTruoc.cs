@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +96,7 @@ namespace VanPhap.View
                     }
                 }
                 
+               
             }
         }
         public void UpdateData(string data)

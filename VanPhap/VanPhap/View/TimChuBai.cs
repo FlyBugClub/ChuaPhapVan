@@ -1,4 +1,4 @@
-﻿using DocumentFormat.OpenXml.Drawing.Diagrams;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -108,6 +108,7 @@ namespace VanPhap.View
                             {
                                 // Xóa thành công
                                // MessageBox.Show("Xóa thành công");
+                                //MessageBox.Show("Xóa thành công");
                                 HienDanhSach();
 
                             }
@@ -117,6 +118,7 @@ namespace VanPhap.View
                                // MessageBox.Show("Không có dòng nào được xóa");
                             }
                          
+                          
                         }
                     }//Dong if
 
