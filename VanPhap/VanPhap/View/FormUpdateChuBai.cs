@@ -24,7 +24,7 @@ namespace VanPhap.View
 
 
 
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -119,7 +119,7 @@ namespace VanPhap.View
 
                     }
                 }
-                connection.Close();
+                
             }
             string query1 = "Select DiaChiUni, NguyenQuanUni from tblphattu  where id = @idso";
             using (OleDbConnection connection = new OleDbConnection(strCon))
@@ -139,7 +139,7 @@ namespace VanPhap.View
                     }
 
                 }
-                connection.Close();
+                
             }
 
 
@@ -199,7 +199,7 @@ namespace VanPhap.View
 
             if (txt_name.Text.Equals(""))
             {
-                MessageBox.Show("Chủ bái không được để trống!");
+               // MessageBox.Show("Chủ bái không được để trống!");
             }
             else
             {
@@ -295,10 +295,10 @@ namespace VanPhap.View
                         command.Parameters.AddWithValue("?", id);
 
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thành công");
+                      //  MessageBox.Show("Cập nhật thành công");
                         this.Close();
                     }
-                    connection.Close();
+                    
 
                 }
 
@@ -327,7 +327,7 @@ namespace VanPhap.View
                         // Thực thi câu lệnh INSERT
                         int rowsAffected = command.ExecuteNonQuery();
                         // Kiểm tra số dòng bị ảnh hưởng
-                        connection.Close();
+                       
                     }
 
                     SoCauAn form1 = Application.OpenForms.OfType<SoCauAn>().FirstOrDefault();

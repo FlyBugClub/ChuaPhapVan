@@ -16,7 +16,7 @@ namespace VanPhap.View
 {
     public partial class ChuBai : Form
     {
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -357,7 +357,7 @@ namespace VanPhap.View
                                 else
                                 {
 
-                                    MessageBox.Show("Không có dữ liệu trả về từ câu truy vấn SELECT.");
+                                   // MessageBox.Show("Không có dữ liệu trả về từ câu truy vấn SELECT.");
                                 }
                             }
                         }
@@ -492,9 +492,9 @@ namespace VanPhap.View
                     }
                     catch (OleDbException ex)
                     {
-                        MessageBox.Show("Lỗi khi thêm dữ liệu vào cơ sở dữ liệu: " + ex.Message);
+                      //  MessageBox.Show("Lỗi khi thêm dữ liệu vào cơ sở dữ liệu: " + ex.Message);
                     }
-                    connection.Close();
+                    
                 }
 
             }

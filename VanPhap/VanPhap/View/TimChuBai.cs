@@ -18,7 +18,7 @@ namespace VanPhap.View
     {
         private Form activeForm;
 
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -55,7 +55,7 @@ namespace VanPhap.View
         {
             if (txt_name.Text.Equals("1"))
             {
-                MessageBox.Show("Chủ bái đang trống!\nVui lòng chọn một chủ bái bên dưới để xóa!");
+               // MessageBox.Show("Chủ bái đang trống!\nVui lòng chọn một chủ bái bên dưới để xóa!");
 
             }
             else
@@ -107,22 +107,22 @@ namespace VanPhap.View
                             if (lsv_timchubai.SelectedItems.Count > 0)
                             {
                                 // Xóa thành công
-                                MessageBox.Show("Xóa thành công");
+                               // MessageBox.Show("Xóa thành công");
                                 HienDanhSach();
 
                             }
                             else
                             {
                                 // Không có dòng nào được xóa
-                                MessageBox.Show("Không có dòng nào được xóa");
+                               // MessageBox.Show("Không có dòng nào được xóa");
                             }
-                            connection.Close();
+                         
                         }
                     }//Dong if
 
                     else
                     {
-                        MessageBox.Show("Vui lòng chọn một người bên dưới để xóa!");
+                       // MessageBox.Show("Vui lòng chọn một người bên dưới để xóa!");
 
                     }
                 }
@@ -186,7 +186,7 @@ namespace VanPhap.View
 
                     lsv_timchubai.Items.Add(lvi);
                 }
-                CloseConection();
+              
             }
         }
 

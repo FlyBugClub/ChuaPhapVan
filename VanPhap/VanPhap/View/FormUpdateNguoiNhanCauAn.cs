@@ -22,7 +22,7 @@ namespace VanPhap.View
         }
 
 
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -357,7 +357,7 @@ namespace VanPhap.View
 
                     }
                 }
-                connection.Close();
+                
             }
         }
 
@@ -483,7 +483,7 @@ namespace VanPhap.View
                         // Thực thi câu lệnh INSERT
                         int rowsAffected = command.ExecuteNonQuery();
                         // Kiểm tra số dòng bị ảnh hưởng
-                        connection.Close();
+                      
                     }
 
                 }
@@ -520,7 +520,7 @@ namespace VanPhap.View
         {
             if (txt_tuoi.Text.Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập năm sinh trước");
+               // MessageBox.Show("Vui lòng nhập năm sinh trước");
             }
             else
             {

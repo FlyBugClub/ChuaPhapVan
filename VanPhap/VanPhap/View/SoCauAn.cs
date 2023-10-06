@@ -22,7 +22,7 @@ namespace VanPhap.View
 {
     public partial class SoCauAn : Form
     {
-        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Demo.accdb";
+        string strCon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Z:\\Manager1.mdb";
         OleDbConnection sqlCon = null;
         //Hàm mở kết nối db
         public void OpenConection()
@@ -134,7 +134,7 @@ namespace VanPhap.View
 
 
                 }
-                connection.Close();
+               
             }
         }
 
@@ -312,15 +312,15 @@ namespace VanPhap.View
                         if (lsv_danhsach_cauan.SelectedItems.Count > 0)
                         {
                             // Xóa thành công
-                            MessageBox.Show("Xóa thành công");
+                           // MessageBox.Show("Xóa thành công");
                             HienDanhSach();
                         }
                         else
                         {
                             // Không có dòng nào được xóa
-                            MessageBox.Show("Không có dòng nào được xóa");
+                            //MessageBox.Show("Không có dòng nào được xóa");
                         }
-                        connection.Close();
+                       
                     }
                 }//Dong if
                 else
@@ -620,7 +620,7 @@ namespace VanPhap.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+              //  MessageBox.Show(ex.ToString());
 
             }
 
@@ -631,7 +631,7 @@ namespace VanPhap.View
         {
             if (txt_name.Text.Equals(""))
             {
-                MessageBox.Show("Chủ bái đang trống!\nVui lòng chọn || Có sớ || Chưa có sớ || để thêm chủ bái!");
+               // MessageBox.Show("Chủ bái đang trống!\nVui lòng chọn || Có sớ || Chưa có sớ || để thêm chủ bái!");
             }
             else
             {
